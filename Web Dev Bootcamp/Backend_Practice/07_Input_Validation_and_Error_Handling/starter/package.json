@@ -1,0 +1,13 @@
+{
+  "name": "topic-07-validation-errors",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test_errors.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

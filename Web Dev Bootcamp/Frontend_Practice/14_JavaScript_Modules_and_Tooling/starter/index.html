@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite & ES Modules Shopping Cart</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Modular Storefront</h1>
+    <div class="cart-box">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="summary">
+        <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+        <p>Tax (8%): <strong id="tax">$0.00</strong></p>
+        <p>Total: <strong id="total">$0.00</strong></p>
+      </div>
+      <button id="add-item-btn">Add Random Product</button>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

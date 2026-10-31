@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootcamp Live Portal - Real-Time Learning Workspace</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- TOP APPLICATION BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Bootcamp<strong>Live</strong></span>
+      </div>
+      <div class="connection-status" id="connection-status">
+        <span class="dot"></span>
+        <span class="status-label">Connecting...</span>
+      </div>
+    </div>
+
+    <div class="topbar-center">
+      <div class="active-topic-badge" id="active-topic-title">Select a Topic</div>
+    </div>
+
+    <div class="topbar-right">
+      <label class="toggle-control" title="Automatically re-run tests/code when you save files in your editor">
+        <input type="checkbox" id="autorun-toggle" checked>
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        <span class="toggle-label">Auto-Run on Save</span>
+      </label>
+
+      <button id="run-btn" class="btn btn-primary" title="Execute exercise runner / tests now">
+        <span class="btn-icon">▶</span> Run Tests
+      </button>
+
+      <div class="layout-toggles">
+        <button class="icon-btn active" id="btn-view-split" title="Split View">◫</button>
+        <button class="icon-btn" id="btn-view-preview" title="Focus Preview">🗖</button>
+        <button class="icon-btn" id="btn-view-code" title="Focus Console">⌨</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-wrapper">
+    <!-- LEFT SIDEBAR: TOPIC DIRECTORY -->
+    <aside class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="topic-search" placeholder="Search 44 topics & projects...">
+      </div>
+
+      <nav class="topic-tree" id="topic-tree">
+        <div class="loading-spinner">Loading topics...</div>
+      </nav>
+    </aside>
+
+    <!-- CONTENT WORKSPACE -->
+    <main class="workspace">
+      <!-- WORKSPACE TABS HEADER -->
+      <div class="workspace-tabs">
+        <div class="tabs-group">
+          <button class="tab-btn active" data-tab="tab-preview" id="tab-btn-preview">
+            🖥️ Live Preview
+            <span class="tab-indicator" id="preview-update-indicator"></span>
+          </button>
+          <button class="tab-btn" data-tab="tab-runner" id="tab-btn-runner">
+            ⚡ Live Console & Tests
+            <span class="runner-badge" id="runner-status-badge">Idle</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-instructions">
+            📋 Challenge & Checklist
+          </button>
+          <button class="tab-btn" data-tab="tab-files">
+            📁 Starter Code
+          </button>
+          <button class="tab-btn" data-tab="tab-console">
+            💬 Browser Logs
+            <span class="log-count-badge" id="browser-log-count">0</span>
+          </button>
+        </div>
+
+        <!-- PREVIEW CONTROLS (Visible when preview tab is active) -->
+        <div class="preview-toolbar" id="preview-toolbar">
+          <div class="device-switcher">
+            <button class="device-btn active" data-width="100%">Desktop (100%)</button>
+            <button class="device-btn" data-width="768px">Tablet (768px)</button>
+            <button class="device-btn" data-width="375px">Mobile (375px)</button>
+          </div>
+          <button class="icon-btn" id="reload-preview-btn" title="Refresh Live Preview">↻</button>
+          <a href="#" target="_blank" id="open-external-btn" class="icon-btn" title="Open Preview in New Tab">↗</a>
+        </div>
+      </div>
+
+      <!-- TAB 1: LIVE PREVIEW IFRAME -->
+      <section class="tab-panel active" id="tab-preview">
+        <div class="preview-container" id="preview-wrapper">
+          <iframe id="preview-frame" src="about:blank"></iframe>
+          <div class="no-preview-placeholder" id="no-preview-placeholder" style="display: none;">
+            <div class="placeholder-content">
+              <h3>⚡ Console / Logic Module</h3>
+              <p>This topic focuses on terminal scripts, algorithms, or APIs. Switch to the <strong>Live Console & Tests</strong> tab to see your code execution and test assertions update in real-time!</p>
+              <button class="btn btn-secondary" onclick="document.querySelector('#tab-btn-runner').click()">View Live Terminal Output &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: LIVE TERMINAL & TEST RUNNER -->
+      <section class="tab-panel" id="tab-runner">
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title" id="terminal-command-title">bash</span>
+            <button class="btn btn-sm" id="clear-terminal-btn">Clear</button>
+          </div>
+          <pre class="terminal-body" id="terminal-output">Select a topic to run its exercise...</pre>
+        </div>
+      </section>
+
+      <!-- TAB 3: INSTRUCTIONS & ACCEPTANCE CHECKLIST -->
+      <section class="tab-panel" id="tab-instructions">
+        <div class="instructions-container" id="instructions-content">
+          <p>Select a topic from the sidebar to view requirements and hints.</p>
+        </div>
+      </section>
+
+      <!-- TAB 4: STARTER FILES -->
+      <section class="tab-panel" id="tab-files">
+        <div class="files-viewer-container">
+          <div class="files-list" id="starter-files-list"></div>
+          <div class="file-code-wrapper">
+            <div class="file-meta">
+              <span id="current-file-name">Select a file</span>
+            </div>
+            <pre class="file-code" id="current-file-content">// File content will display here</pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: BROWSER LOGS -->
+      <section class="tab-panel" id="tab-console">
+        <div class="browser-logs-container">
+          <div class="logs-header">
+            <span>Captured <code>console.log()</code> statements from live preview:</span>
+            <button class="btn btn-sm" id="clear-logs-btn">Clear Logs</button>
+          </div>
+          <div class="logs-list" id="browser-logs-list">
+            <div class="log-empty">No console logs recorded yet.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="live-toast">⚡ File saved on disk &mdash; Live Updating...</div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+

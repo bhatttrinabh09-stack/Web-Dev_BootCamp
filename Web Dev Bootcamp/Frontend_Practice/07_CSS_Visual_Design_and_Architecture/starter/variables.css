@@ -1,0 +1,47 @@
+/* ==============================================================================
+   Topic 07 Starter: Design Tokens (CSS Custom Properties)
+   Define your mathematical spacing scale and accessible palette below.
+   ============================================================================== */
+
+:root {
+  /* PALETTE TOKENS - TODO: Define high contrast accessible colors */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* ALERT COLORS */
+  --color-info-bg: #eff6ff;
+  --color-info-text: #1e40af;
+  --color-success-bg: #f0fdf4;
+  --color-success-text: #166534;
+  --color-danger-bg: #fef2f2;
+  --color-danger-text: #991b1b;
+
+  /* SPACING SCALE (4px / 8px multiples) - TODO: Complete the scale */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2rem;    /* 32px */
+
+  /* TYPOGRAPHY */
+  --font-family: system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  /* RADII & ELEVATION */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+
+  /* TRANSITIONS */
+  --transition-normal: transform 150ms ease, opacity 150ms ease, box-shadow 150ms ease;
+}

@@ -1,0 +1,19 @@
+/* Design Tokens */
+:root {
+  --color-primary: #2563eb;
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}

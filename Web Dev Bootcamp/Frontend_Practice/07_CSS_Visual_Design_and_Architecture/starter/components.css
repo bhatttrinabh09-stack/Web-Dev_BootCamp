@@ -1,0 +1,130 @@
+/* ==============================================================================
+   Topic 07 Starter: Reusable UI Components
+   Follow instructions in README.md section 8.
+   ============================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  padding: var(--space-8) var(--space-4);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+}
+
+.showcase-section {
+  margin-bottom: var(--space-8);
+}
+
+.showcase-section h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-4);
+}
+
+/* 1. ALERT BANNER STYLES - TODO: Style using variables */
+.alert {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-sm);
+  border: 1px solid transparent;
+}
+
+.alert--info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+  border-color: #bfdbfe;
+}
+
+.alert--success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: #bbf7d0;
+}
+
+.alert--danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  border-color: #fecaca;
+}
+
+/* 2. BADGE STYLES */
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge--warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* 3. CARD GRID & INTERACTIVE CARD */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  /* TODO: Apply smooth transform transition */
+  transition: var(--transition-normal);
+}
+
+/* TODO: Implement GPU-accelerated hover */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card__title {
+  margin: var(--space-2) 0;
+  font-size: var(--font-size-base);
+}
+
+.card__body {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* 4. REDUCED MOTION QUERY */
+@media (prefers-reduced-motion: reduce) {
+  /* TODO: Disable transitions and animations */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

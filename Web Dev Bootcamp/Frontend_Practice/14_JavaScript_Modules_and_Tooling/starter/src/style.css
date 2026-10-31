@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; padding: 2rem; background: #f8fafc; }
+.cart-box { background: white; padding: 1.5rem; border-radius: 8px; max-width: 400px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.summary { border-top: 1px solid #e2e8f0; margin: 1rem 0; padding-top: 0.5rem; }
+button { background: #2563eb; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }

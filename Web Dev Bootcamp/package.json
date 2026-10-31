@@ -1,0 +1,15 @@
+{
+  "name": "web-dev-bootcamp",
+  "version": "1.0.0",
+  "description": "Full-Stack Web Development Bootcamp with Live Real-Time Learning Portal",
+  "type": "module",
+  "scripts": {
+    "start": "node portal/server.js",
+    "dev": "node portal/server.js",
+    "portal": "node portal/server.js"
+  },
+  "keywords": ["web-development", "bootcamp", "react", "node", "express", "postgresql"],
+  "author": "",
+  "license": "ISC"
+}
+

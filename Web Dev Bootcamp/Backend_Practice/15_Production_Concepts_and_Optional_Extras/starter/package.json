@@ -1,0 +1,9 @@
+{
+  "name": "topic-15-production-extras",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test_cursor.js"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Finance Tracker</h1>
+      <p>Mastering Vanilla JavaScript & DOM State</p>
+    </header>
+
+    <!-- Dashboard Summary Cards -->
+    <section class="summary-cards">
+      <div class="card">
+        <h3>Income</h3>
+        <p id="total-income" class="amount income">$0.00</p>
+      </div>
+      <div class="card">
+        <h3>Expenses</h3>
+        <p id="total-expenses" class="amount expense">$0.00</p>
+      </div>
+      <div class="card">
+        <h3>Net Balance</h3>
+        <p id="net-balance" class="amount balance">$0.00</p>
+      </div>
+    </section>
+
+    <!-- Transaction Form -->
+    <form id="transaction-form" class="transaction-form">
+      <!-- TODO: Inputs for Description, Amount, Category, Type, Submit -->
+    </form>
+
+    <!-- Transaction List -->
+    <section class="transaction-history">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

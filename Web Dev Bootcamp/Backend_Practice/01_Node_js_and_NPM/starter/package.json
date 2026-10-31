@@ -1,0 +1,10 @@
+{
+  "name": "topic-01-node-npm",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node test_cli.js"
+  }
+}

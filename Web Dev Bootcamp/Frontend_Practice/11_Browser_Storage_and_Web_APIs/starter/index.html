@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persistent Task Manager (Web APIs)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 500px; margin: 2rem auto; padding: 1rem; }
+    .toolbar { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+    button { padding: 0.5rem 1rem; cursor: pointer; }
+    .toast { display: inline-block; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem; margin-left: 0.5rem; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <h1>Persistent Task Manager</h1>
+  
+  <div class="toolbar">
+    <button id="add-prompt-btn">Add New Task</button>
+    <button id="share-btn">Copy Shareable Link</button>
+    <button id="clear-btn">Clear All</button>
+    <span id="toast" class="toast" style="display: none;">Copied to clipboard!</span>
+  </div>
+
+  <ul id="task-list"></ul>
+
+  <script src="storage_app.js"></script>
+</body>
+</html>

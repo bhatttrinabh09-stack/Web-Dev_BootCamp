@@ -1,0 +1,13 @@
+{
+  "name": "topic-05-middleware",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test_middleware.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

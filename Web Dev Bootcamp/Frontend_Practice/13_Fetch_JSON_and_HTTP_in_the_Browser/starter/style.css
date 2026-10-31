@@ -1,0 +1,20 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: #f8fafc; color: #1e293b; padding: 2rem 1rem; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { margin-bottom: 2rem; }
+.controls { display: flex; gap: 1rem; margin-top: 1rem; }
+.controls input { flex: 1; padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+.controls button { padding: 0.6rem 1rem; background: #e2e8f0; border: none; border-radius: 6px; cursor: pointer; }
+
+.state-card { text-align: center; padding: 3rem 1rem; background: white; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 1rem; }
+.error-card { border-color: #fecaca; background: #fff5f5; color: #991b1b; }
+.error-card button { margin-top: 1rem; background: #dc2626; color: white; border: none; padding: 0.5rem 1.25rem; border-radius: 4px; cursor: pointer; }
+
+.spinner { width: 36px; height: 36px; border: 4px solid #e2e8f0; border-top-color: #2563eb; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.user-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.user-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; }
+.user-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.user-card p { font-size: 0.85rem; color: #64748b; }
+.user-card .company { margin-top: 0.5rem; font-weight: 500; color: #2563eb; }

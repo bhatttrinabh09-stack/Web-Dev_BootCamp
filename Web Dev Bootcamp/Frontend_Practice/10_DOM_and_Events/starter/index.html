@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Task Manager (DOM & Events)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Task Manager</h1>
+      <p>Mastering DOM Manipulation and Event Delegation</p>
+    </header>
+
+    <!-- TASK INPUT FORM -->
+    <form id="task-form" class="task-form">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="What needs to be done?" 
+        autocomplete="off"
+      >
+      <button type="submit" id="add-btn">Add Task</button>
+    </form>
+    <p id="error-msg" class="error-msg" hidden>Task cannot be empty!</p>
+
+    <!-- FILTER CONTROLS -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- TASK LIST (Event Delegation Parent) -->
+    <ul id="task-list" class="task-list">
+      <!-- Dynamic <li> items will be rendered here -->
+    </ul>
+
+    <footer class="app-footer">
+      <span id="items-left">0 items remaining</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

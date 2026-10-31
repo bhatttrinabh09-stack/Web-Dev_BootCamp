@@ -1,0 +1,9 @@
+{
+  "name": "topic-02-fs-environment",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test_notes.js"
+  }
+}

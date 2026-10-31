@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tokens & Mini Design System</title>
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="components.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>UI Component Design System</h1>
+      <p>A token-driven component showcase.</p>
+    </header>
+
+    <!-- ALERT COMPONENTS -->
+    <section class="showcase-section">
+      <h2>Alert Banners</h2>
+      <div class="alert alert--info">
+        <strong>Info:</strong> Scheduled maintenance tonight at 02:00 UTC.
+      </div>
+      <div class="alert alert--success">
+        <strong>Success:</strong> Your profile settings were saved successfully.
+      </div>
+      <div class="alert alert--danger">
+        <strong>Error:</strong> Failed to connect to server. Please try again.
+      </div>
+    </section>
+
+    <!-- BADGE COMPONENTS -->
+    <section class="showcase-section">
+      <h2>Status Badges</h2>
+      <span class="badge badge--primary">Active</span>
+      <span class="badge badge--warning">Pending</span>
+      <span class="badge">Archived</span>
+    </section>
+
+    <!-- INTERACTIVE CARDS -->
+    <section class="showcase-section">
+      <h2>Interactive Cards</h2>
+      <div class="card-grid">
+        <article class="card">
+          <span class="badge badge--primary">Design Token</span>
+          <h3 class="card__title">Consistent Spacing</h3>
+          <p class="card__body">Built using a strict 4px/8px mathematical scale to preserve vertical rhythm.</p>
+        </article>
+        <article class="card">
+          <span class="badge badge--warning">Accessibility</span>
+          <h3 class="card__title">Motion Respect</h3>
+          <p class="card__body">Animations automatically step down when operating systems request reduced motion.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Directory (Fetch & HTTP States)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Team Directory</h1>
+      <p>Demonstrating robust HTTP states and error handling</p>
+      
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="Search by name...">
+        <button id="simulate-error-btn">Simulate 404 Error</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1. LOADING STATE -->
+      <div id="loading-state" class="state-card" hidden>
+        <div class="spinner"></div>
+        <p>Loading team members...</p>
+      </div>
+
+      <!-- 2. ERROR STATE -->
+      <div id="error-state" class="state-card error-card" hidden>
+        <p id="error-message">Failed to load data.</p>
+        <button id="retry-btn">Retry Request</button>
+      </div>
+
+      <!-- 3. EMPTY STATE -->
+      <div id="empty-state" class="state-card" hidden>
+        <p>No team members match your search criteria.</p>
+      </div>
+
+      <!-- 4. SUCCESS STATE (Grid of cards) -->
+      <div id="user-grid" class="user-grid"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

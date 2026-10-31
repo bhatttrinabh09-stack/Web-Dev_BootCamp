@@ -1,0 +1,8 @@
+body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; margin: 0; }
+.navbar { background: #1e293b; padding: 1rem 2rem; display: flex; gap: 1.5rem; }
+.navbar a { color: #94a3b8; text-decoration: none; font-weight: 500; }
+.navbar a.active { color: #38bdf8; font-weight: 700; }
+.main-layout { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+.article-item { background: white; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 1rem; }
+.article-item a { color: #2563eb; text-decoration: none; font-size: 1.2rem; font-weight: 600; }
+.btn-back { background: #e2e8f0; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-bottom: 1rem; }

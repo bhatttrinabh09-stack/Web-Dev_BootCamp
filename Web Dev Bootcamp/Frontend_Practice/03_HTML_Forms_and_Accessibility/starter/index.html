@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Event Registration</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    .form-group { margin-bottom: 1.25rem; display: flex; flex-direction: column; }
+    label { font-weight: 600; margin-bottom: 0.25rem; }
+    input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #767676; border-radius: 4px; }
+    input:focus-visible, select:focus-visible { outline: 3px solid #005fcc; outline-offset: 2px; }
+    .hint { font-size: 0.85rem; color: #555; margin-top: 0.25rem; }
+    fieldset { border: 1px solid #ccc; padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; }
+    legend { font-weight: 600; padding: 0 0.5rem; }
+    .radio-label { font-weight: normal; margin-left: 0.5rem; }
+    button { background: #005fcc; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #004499; }
+  </style>
+</head>
+<body>
+  <h1>Tech Summit 2026 Registration</h1>
+  <p>Fill out the form below to secure your ticket. Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+  <!-- TODO: Build the accessible form here adhering to README instructions -->
+  <form action="/register" method="POST">
+    <!-- 1. Full Name -->
+    <div class="form-group">
+      <!-- TODO: Add label linked with for/id, type text, minlength 3, required -->
+    </div>
+
+    <!-- 2. Email Address -->
+    <div class="form-group">
+      <!-- TODO: Add label linked with for/id, type email, required -->
+    </div>
+
+    <!-- 3. Ticket Quantity -->
+    <div class="form-group">
+      <!-- TODO: Add label, type number, min 1, max 5, required, aria-describedby for hint -->
+      <span id="ticket-hint" class="hint">Maximum of 5 tickets per attendee registration.</span>
+    </div>
+
+    <!-- 4. Attendee Track (Radio group in fieldset) -->
+    <!-- TODO: Fieldset with legend and 3 radio buttons: Frontend, Backend, Full Stack -->
+
+    <!-- 5. Dietary Requirements -->
+    <div class="form-group">
+      <!-- TODO: Label and select dropdown (None, Vegetarian, Vegan, Gluten-Free) -->
+    </div>
+
+    <!-- 6. Terms Acceptance -->
+    <div class="form-group" style="flex-direction: row; align-items: center; gap: 0.5rem;">
+      <!-- TODO: Checkbox input and label for Terms and Conditions -->
+    </div>
+
+    <!-- 7. Submit Button -->
+    <button type="submit">Complete Registration</button>
+  </form>
+</body>
+</html>

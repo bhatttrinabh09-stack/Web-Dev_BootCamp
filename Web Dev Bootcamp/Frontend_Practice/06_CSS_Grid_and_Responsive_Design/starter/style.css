@@ -1,0 +1,116 @@
+/* ==============================================================================
+   Topic 06 Starter: Responsive CSS Grid Dashboard
+   Follow instructions in README.md section 8.
+   ============================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+/* BASE MOBILE LAYOUT (< 768px) */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dash-header {
+  background: #1e293b;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-main {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* METRICS - TODO: Implement responsive grid */
+.metrics-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  /* Default: 1 column on mobile. Use auto-fit or media queries for tablet/desktop! */
+}
+
+.metric-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.metric-title {
+  font-size: 0.85rem;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.metric-val {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* CONTENT SPLIT - Chart and Activity */
+.content-split {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.chart-panel, .activity-panel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.chart-placeholder {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+.activity-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.activity-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.dash-footer {
+  background: #e2e8f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ==============================================================================
+   TODO: Add Mobile-First Media Queries below
+   1. @media (min-width: 768px) -> Tablet: 2 columns for metrics
+   2. @media (min-width: 1024px) -> Desktop: 4 columns for metrics, side-by-side for chart & activity
+   ============================================================================== */

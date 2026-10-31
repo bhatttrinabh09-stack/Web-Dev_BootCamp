@@ -1,0 +1,112 @@
+/* ==============================================================================
+   Topic 05 Starter: Flexbox and Positioning
+   Follow instructions in README.md section 8.
+   ============================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 200vh; /* Allow scrolling to test sticky navbar */
+}
+
+/* 1. NAVBAR - TODO: Make sticky and use flexbox alignment */
+.navbar {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  /* TODO: Add display: flex, justify-content, align-items, position: sticky */
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav-links {
+  list-style: none;
+  /* TODO: Turn into horizontal row with gap */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.cta-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+/* 2. CARD CONTAINER - TODO: Make flex container that wraps with gap */
+.card-container {
+  /* Currently unaligned. Add flex styling! */
+}
+
+/* 3. CARD - TODO: Set positioning context for badge and flex sizing */
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  /* Currently missing positioning context! */
+}
+
+/* 4. BADGE - Position in top right corner of each card */
+.badge {
+  background: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  /* TODO: Position absolutely inside .card */
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.card p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
