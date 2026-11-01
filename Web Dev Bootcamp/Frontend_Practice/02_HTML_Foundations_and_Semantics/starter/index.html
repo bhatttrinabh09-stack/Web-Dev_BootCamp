@@ -16,62 +16,91 @@
        ===================================================================== -->
 
   <!-- SITE HEADER & NAVIGATION -->
-  <div class="site-header">
-    <div class="site-title">Open Source Engineering Club</div>
-    <div class="menu">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+  <header class="site-header">
+      <div class="site-title"><h1>Open Source Engineering Club</h1></div>
+      <nav class="menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </nav>
+  </header>
 
   <!-- MAIN CONTENT AREA -->
-  <div class="content-wrapper">
+  <main class="content-wrapper">
     <!-- HERO / ABOUT SECTION -->
-    <div class="intro-block">
-      <div class="section-title">Welcome to Our Community</div>
+    <article class="intro-block">
+      <div class="section-title"><h2>Welcome to Our Community</h2></div>
       <p>We are a student-led collective building practical full-stack software and contributing to open-source ecosystems.</p>
       <!-- TODO: Replace generic alt with meaningful description -->
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="image">
-    </div>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="image of students working and coding">
+    </article>
 
     <!-- FEATURED PROJECTS -->
-    <div class="project-showcase">
-      <div class="section-title">Featured Projects</div>
+    <article class="project-showcase">
+      <div class="section-title"><h2>Featured Projects</h2></div>
 
       <!-- Project 1 -->
-      <div class="project-item">
-        <div class="item-name">Campus Route Planner</div>
+      <section class="project-item">
+        <div class="item-name"><h3>Campus Route Planner</h3></div>
         <p>An accessible mapping tool calculating wheelchair-friendly routes across university campuses.</p>
-        <a href="#">click here</a>
-      </div>
+        <a href="https://www.campusjourney.in/">click here</a>
+      </section>
 
       <!-- Project 2 -->
-      <div class="project-item">
-        <div class="item-name">Peer Tutoring Hub</div>
+      <section class="project-item">
+        <div class="item-name"><h3>Peer Tutoring Hub</h3></div>
         <p>Real-time collaborative whiteboard and scheduling platform for STEM students.</p>
-        <a href="#">click here</a>
-      </div>
-    </div>
+        <a href="https://thepeertutoringprogram.org/chapter-hub/">click here</a>
+      </section>
+    </article>
 
     <!-- WEEKLY SCHEDULE TABLE -->
-    <div class="schedule-block">
-      <div class="section-title">Weekly Workshop Schedule</div>
+    <section class="schedule-block">
+      <div class="section-title"><h2>Weekly Workshop Schedule</h2></div>
       <!-- TODO: Implement a semantic table below with headers (Day, Topic, Time, Location) -->
-      <p>[Replace this paragraph with a semantic HTML table]</p>
-    </div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Time</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Linked List</td>
+            <td>4 pm</td>
+            <td>CR 41</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Trees</td>
+            <td>4:30 pm</td>
+            <td>CR 41</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Searching Algorithms</td>
+            <td>4 pm</td>
+            <td>CR 41</td>
+          </tr>
+        </tbody>
+      </section>
+    </table>
 
     <!-- SIDEBAR / ANNOUNCEMENTS -->
-    <div class="sidebar">
-      <div class="sidebar-title">Announcements</div>
+    <aside class="sidebar">
+      <div class="sidebar-title"><h2>Announcements</h2></div>
       <p>Hackathon registration opens next Monday. Form your teams early!</p>
-    </div>
-  </div>
+    </aside>
+  </main>
 
   <!-- SITE FOOTER -->
-  <div class="site-footer">
+  <footer class="site-footer">
     <p>&copy; 2026 Open Source Engineering Club. Built for learning.</p>
-  </div>
+  </footer>
 </body>
 </html>
